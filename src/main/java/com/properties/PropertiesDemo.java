@@ -1,9 +1,7 @@
 package com.properties;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
@@ -20,8 +18,10 @@ public class PropertiesDemo {
      */
     public static String getPropertiesValueByProperties(String propertiesKey) {
 
+
         Properties props = new Properties();
         InputStream in = null;
+
         try {
             in = PropertiesDemo.class.getClassLoader().getResourceAsStream("com/properties/test.properties");
             props.load(in);

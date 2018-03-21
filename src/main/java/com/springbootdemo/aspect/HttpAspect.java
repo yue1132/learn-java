@@ -2,7 +2,6 @@ package com.springbootdemo.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.omg.CORBA.OBJECT_NOT_EXIST;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -18,7 +17,12 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class HttpAspect {
 
-    public static final Logger logger = LoggerFactory.getLogger(HttpAspect.class);
+    private static final Logger logger = LoggerFactory.getLogger(HttpAspect.class);
+
+    //@Pointcut("execution(public * com.springbootdemo.controller.*(..))")
+    //public void abc (){
+
+    //}
 
     @Pointcut("execution(public * com.springbootdemo.controller.GirlController.*(..)))")
     public void log() {
@@ -62,7 +66,5 @@ public class HttpAspect {
     @AfterReturning(pointcut = "log()", returning = "object")
     public void doAfterReturning(Object object) {
         logger.info("response={}", object);//返回参数值
-
-
     }
 }

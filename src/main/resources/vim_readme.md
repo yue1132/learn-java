@@ -1,5 +1,15 @@
 ## VIM使用技巧
 
+
+ ### surround
+    ysiw
+    csiw
+    dsiw
+ ### 寄存器
+    "*和"+ 都系统剪切板
+    "0 复制专用寄存器
+    
+
  ### 代码折叠 
     zc 折叠
     zC 对所在范围内所有嵌套的折叠点进行折叠
@@ -64,7 +74,28 @@
         连续的多行的左右移动
             移动移动到要处理的首行，输入ma
             移动到要处理的尾行，输入<'a
-    
    
+   ### 列操作
    
+   li.   a{background-image: url('/components/sprrite.png') }
+   li.two   a{background-image: url('/components/sprrite.png') }
+   li.three a{background-image: url('/components/sprrite.png') }
+   li.four  a{background-image: url('/components/sprrite.png') }
+
    
+    var foo 	| 1;
+    -----------------------
+    var foo 	| 1;
+    var bar 	| 'a';
+    var foobar 	| foo + bar ;
+   
+   1.One
+   2.Two
+   3.Three
+   //break up the monotony
+   4.Four
+   5.Five
+   6.Sex
+   
+
+
