@@ -15,6 +15,7 @@ spring:
       #热部署生效
       enabled: true
       #设置重启的目录
-      additional-paths: src/main/java/com/springbootdemo
-      #classpath目录中的WEB-INF文件夹中的内容修改不重启
-      exclude: WEB-INF/**
+      additional-paths: src/main/java
+      #排除那个目录的文件不需要重启
+#      exclude: static/**,public/**
+#      exclude: WEB-INF/**

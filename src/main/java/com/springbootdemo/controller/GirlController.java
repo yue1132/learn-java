@@ -29,11 +29,11 @@ public class GirlController {
     @Resource
     private GirlProperties girlProperties;
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String hello() {
-        logger.info("hello girl!" + girlProperties);
-        return null;
-    }
+//    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+//    public String hello() {
+//        logger.info("hello girl!" + girlProperties);
+//        return null;
+//    }
 
     @RequestMapping("getlist")
     public List getGirlList() {
@@ -112,4 +112,5 @@ public class GirlController {
         girlService.getAge(id);
 
     }
+
 }

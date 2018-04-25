@@ -7,6 +7,7 @@ import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
@@ -26,6 +27,7 @@ import java.io.InputStreamReader;
  * 自ApplicationContextAware的时候就可以得到Spring容器的所有服务
  */
 @Service
+@Component
 public class AwareServiceDemo implements BeanNameAware, ResourceLoaderAware {
 
     private String beanName;
